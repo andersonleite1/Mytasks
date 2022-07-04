@@ -22,7 +22,8 @@ class App {
       .use(cors())
       .use(express.json())
       .use(accessControl)
-      .use('/login', routes.user);
+      .use('/login', routes.user)
+      .use('/tasks', routes.task);
   }
 
   public start(PORT: number | string): void {
